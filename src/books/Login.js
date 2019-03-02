@@ -1,23 +1,41 @@
 import React, {Component} from 'react';
-import { Input } from 'antd';
-import { Button } from 'antd';
+import { Input,Button } from 'antd';
+import {reduxForm,Field} from 'redux-form';
+import {connect} from 'react-redux';
 
 class Login extends Component {
+    doLogin=(values)=>{
+console.log(values);
+    }
     render(){
+        const {handleSubmit,reset}=this.props;
         return(
-            <div>
+            <form onSubmit={handleSubmit(this.doLogin)}>
                 <div className="example-input">
-                    <Input  placeholder="FirstName" />
-                    &nbsp;
-                    <Input.Password placeholder="password" />
+                <label>Userrname</label>
+                <Field
+                component={"input"}
+                type="text"
+                name="username"
+                />
+               <br></br>
+                <label>Password</label>
+                 <Field
+                component={"input"}
+                type="password"
+                name="password"
+                />
+                
                     &nbsp;
                    
                 </div>
-                <Button  type="primary">Login</Button>
+                <button  type="submit">Login</button>
 
-            </div>
+            </form>
         )
     }
 }
-
-export default Login;
+Login=reduxForm({
+    form:'Loginform'
+})(Login);
+export default connect ()(Login);

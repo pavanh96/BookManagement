@@ -8,11 +8,12 @@ import 'antd/dist/antd.css';
 import {BrowserRouter} from 'react-router-dom';
 import {configureStore} from './store/configStore';
 import intinalstate from './store/intinalstate';
+import {Provider} from 'react-redux';
 
-ReactDOM.render(<provider store={configureStore(intinalstate)}>
+ReactDOM.render(<Provider store={configureStore(intinalstate)}>
                     <BrowserRouter>
                             <Landing />
                     </BrowserRouter>
-                </provider>
+                </Provider>
 
     , document.getElementById('root'));

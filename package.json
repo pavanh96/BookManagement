@@ -1,5 +1,6 @@
 {
   "name": "book-management",
+  "proxy":"http://localhost:8080",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +11,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
     "redux": "^4.0.1",
+    "redux-form": "^8.1.0",
     "redux-router": "^2.1.2",
     "redux-thunk": "^2.3.0"
   },

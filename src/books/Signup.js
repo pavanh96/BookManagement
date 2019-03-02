@@ -5,6 +5,7 @@ class Signup extends Component {
         return(
             <div> 
                 Form signup Page
+               
 
             </div>
         )

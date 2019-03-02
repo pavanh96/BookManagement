@@ -26,9 +26,9 @@ const SideMenu = props => {
             
           </Menu.SubMenu>
 
-          <SubMenu key="sub2" title={<span><Icon type="user" />subnav 2</span>}>
+          <SubMenu key="sub2" title={<span><Icon type="user" />User</span>}>
             <Menu.Item key="3"><Link to="/Login">Login</Link> </Menu.Item>
-            <Menu.Item key="4"><Link to="/signup">Signup</Link></Menu.Item>
+            <Menu.Item key="4"><Link to="/signup"><Icon type="usergroup-add" />Signup</Link></Menu.Item>
             
           </SubMenu>
 
